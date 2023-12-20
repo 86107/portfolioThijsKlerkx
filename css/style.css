@@ -1,0 +1,417 @@
+/* Home/navbar */
+body {
+    background-image: url('../img/achtergrond.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+    display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('../img/achtergrond.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 70PX;
+    margin-top: -130PX;
+}
+
+.content P {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.mybutton {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid rgb(0, 150, 136);
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.myspan {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.mybutton:hover .myspan {
+    width: 100%;
+}
+
+/* .mybutton:hover {
+    border: none;
+} */
+
+footer {
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer i {
+    margin-right: 18px;
+    font-size: 20px;
+    color: #009688;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 53%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.header-container {
+    margin-bottom: 0px;
+    font-size: 25px;
+}
+
+.content-container img {
+    max-width: 100%;
+}
+
+/* Add these styles to position the p and img divs side by side */
+.text-container,
+.image-container {
+    display: inline-block;
+    width: 35%; /* Adjust the width as needed */
+    margin-top: 10px;
+}
+
+.text-container {
+    text-align: center;
+    padding-right: 10px; /* Add some spacing between text and image */
+}
+
+.image-container img {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-container,
+    .image-container {
+        width: 100%;
+    }
+}
+
+.info-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* contact */
+
+.contact-title {
+    margin-top: 100px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 4s ease-in-out;
+}
+
+.contact-title h1 {
+    font-size: 32px;
+    line-height: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-title h2 {
+    font-size: 16px;
+}
+
+form {
+    margin-top: 50px;
+    transition: all 4s ease-in-out;
+}
+
+.form-control {
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+input {
+    height: 45px;
+}
+
+form .submit {
+    background: transparent;
+    border: 2px solid #009688;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+form .submit:hover {
+    background-color: #009688;
+    cursor: pointer;
+}
+
+.wrapper .button{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 200px;
+}
+.wrapper .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+  float: left;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #1DA1F2;
+}
+.wrapper .button:nth-child(2):hover .icon{
+  background: #E1306C;
+}
+.wrapper .button:nth-child(3):hover .icon{
+  background: #333;
+}
+.wrapper .button:nth-child(4):hover .icon{
+  background: #ff0000;
+}
+.wrapper .button .icon i{
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i{
+  color: #fff;
+}
+.wrapper .button span{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span{
+  color: #1DA1F2;
+}
+.wrapper .button:nth-child(2) span{
+  color: #E1306C;
+}
+.wrapper .button:nth-child(3) span{
+  color: #333;
+}
+.wrapper .button:nth-child(4) span{
+  color: #ff0000;
+}
+
+.icon a {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* projects */
+
+.projectImage {
+    width: 500px;
+    border: 2px solid #009688;
+    margin-right: 40px;
+    margin-bottom: 10px;
+
+    text-align: center;
+    font-weight: bold;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.projectImage:hover {
+    border: 2px solid white;
+}
+
+.projectcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1500px;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.projectnames {
+    position: absolute;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.project {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.project h1 {
+    position: absolute;
+    top: -50px;
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.project h3 {
+    color: white;
+    background-color: #009688;
+}
+
+.projectpage h1 {
+    font-size: 70px;
+}
+
+.link:hover {
+    color: #009688;
+}
+
+.projectpage {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.projectpage h4 {
+    color: white;
+    margin-bottom: 600px;
+    font-size: 20px;
+}
+
+.projectPicture {
+    position: absolute;
+    bottom: 10px;
+    width: 1000px;
+}
+
+.projectpage img {
+    margin: 0 auto;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    width: 40%;
+}
